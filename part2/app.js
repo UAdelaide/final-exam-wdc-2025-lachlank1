@@ -43,10 +43,6 @@ app.post('/login', async (req, res) => {
         }else{
             res.redirect('/walker-dashboard.html');
         }
-
-
-
-    // }catch
 });
 // Export the app instead of listening here
 module.exports = app;
