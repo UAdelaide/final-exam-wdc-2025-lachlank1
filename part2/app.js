@@ -23,7 +23,10 @@ app.post('/login', (req, res) => {
     const[rows] = await db.query(
         'SELECT * FROM Users WHERE username = ?', [username]
     )
-    
+
+    const user = rows[0]
+
+    if (user.password_hash !== password_hash)
 
     });
 });
