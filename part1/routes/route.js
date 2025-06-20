@@ -31,6 +31,7 @@ router.get('/walkrequests/open', async (req, res) => {
 
 router.get('/walkers/ratings', async (req, res) => {
     const [ratings] = await db.query(`
-        SELECT 
+        SELECT walker_id as walker_id,
+        
 
 module.exports = router;
