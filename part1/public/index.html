@@ -17,7 +17,28 @@
 
 
     <script>
-        const = 
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    dogOfTheDay: null
+                }
+            },
+            methods: {
+                async loadDogOfTheDay() {
+                    try {
+                        const response = await fetch('/api/dog-of-the-day');
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        this.dogOfTheDay = await response.json();
+                    } catch (error) {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    }
+                }
+            }
+        }).mount('#app');
     </script>
 </body>
 </html>
