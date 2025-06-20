@@ -56,8 +56,8 @@ let db;
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (rows[0].count === 0) {
       await db.execute(`
-        INSERT INTO Users (username, email, password_hash, role) VALUE 
-        ('1984', 'George Orwell'),
+        INSERT INTO Users (username, email, password_hash, role) VALUE
+        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
         ('To Kill a Mockingbird', 'Harper Lee'),
         ('Brave New World', 'Aldous Huxley')
       `);
