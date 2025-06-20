@@ -25,6 +25,7 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
+// login route
 app.post('/login', async (req, res) => {
         // Get username and password from request body
         const { username, password } = req.body;
@@ -45,7 +46,7 @@ app.post('/login', async (req, res) => {
             res.redirect('/walker-dashboard.html');
         }
 });
-
+//
 app.get('/logout', (req, res) => {
     // Destroy the session
     req.session.destroy(() => {
