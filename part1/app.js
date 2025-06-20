@@ -131,8 +131,10 @@ let db;
             ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
             ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Sam', 'large'),
             ((SELECT user_id FROM Users WHERE username = 'lachlankeep'), 'pibble', 'small'),
+            ((SELECT user_id FROM Users WHERE username = 'hello'), 'hidog', 'small'),
         `);
     }
+    const []
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
