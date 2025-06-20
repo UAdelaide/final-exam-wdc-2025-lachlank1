@@ -13,7 +13,7 @@ router.get('/dogs', async (req, res) => {
     res.json(dogs);
 });
 
-router.get('/walkrequets/open', async (req, res) => {
+router.get('/walkrequests/open', async (req, res) => {
     const [requests] = await db.query(`
         SELECT wr.request_id as request_id,
         wr.dog_id as dog_name
