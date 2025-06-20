@@ -31,7 +31,7 @@ app.post('/login', async (req, res) => {
         const { username, password } = req.body;
 
         // Get user details
-        const [rows] = await db.query(`SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);;
+        const [rows] = await db.query(`SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);
 
         // if the user exists, set session variables
         const user = rows[0];
@@ -46,7 +46,7 @@ app.post('/login', async (req, res) => {
             res.redirect('/walker-dashboard.html');
         }
 });
-// logout route 
+// logout route
 app.get('/logout', (req, res) => {
     // Destroy the session
     req.session.destroy(() => {
