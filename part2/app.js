@@ -28,7 +28,7 @@ app.post('/login', (req, res) => {
         res.json({ message: 'Login successful', username, password });
         if (results[0].role === 'walker') {
             res.json({ message: 'Welcome Walker!', username });
-            res.redirect
+            res.redirect('/walker-dashboard.html')
         }
         else if (results[0].role === 'owner') {
             res.json({ message: 'Welcome Owner!', username });
