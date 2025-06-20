@@ -141,6 +141,8 @@ let db;
             ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
             ((SELECT dog_id FROM Dogs WHERE name = 'pibble'), '2025-06-10 09:30:00', 15, 'North Terrace', 'open'),
+            ((SELECT dog_id FROM Dogs WHERE name = 'Sam'), '2025-07-10 09:30:00', 60, 'Glandore', 'cancelled'),
+            ((SELECT dog_id FROM Dogs WHERE name = 'hidog'), '2025-06-11 09:00:00', 23, 'Glenelg', 'open'),
             
         `)
   } catch (err) {
