@@ -46,7 +46,7 @@ app.post('/login', async (req, res) => {
             res.redirect('/walker-dashboard.html');
         }
 });
-//
+// logout route 
 app.get('/logout', (req, res) => {
     // Destroy the session
     req.session.destroy(() => {
