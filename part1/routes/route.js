@@ -20,6 +20,7 @@ router.get('/walkrequests/open', async (req, res) => {
         wr.request_time as request_time,
         wr.duration_minutes as duration_minutes,
         wr.location as location,
+        FROM WalkRequests wr
         Join Dogs d ON wr.dog_id = d.dog_id
         Join  Users u ON d.owner_id = u.user_id
         WHERE wr.status = 'open'
