@@ -30,7 +30,7 @@ app.post('/login', async (req, res) => {
         const [rows] = await db.query(`SELECT username, role FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);
 
         if (rows.length === 0 ){
-            return res.status(401).json({error: "Wrong login"});
+            return res.status(401).json({ error: "Wrong login" });
         }
         const user = rows[0];
         req.session.userid = user.user_id;
