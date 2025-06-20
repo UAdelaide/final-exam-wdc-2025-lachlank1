@@ -37,7 +37,7 @@ app.post('/login', async (req, res) => {
         req.session.role = user.role;
 
         if (user.role === 'owner'){
-            res.redorect('/owner-dashboard.html');
+            res.redirect('/owner-dashboard.html');
         }else{
             res.redirect('/walker-dashboard.html');
         }
