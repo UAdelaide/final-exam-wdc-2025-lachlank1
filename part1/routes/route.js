@@ -34,7 +34,7 @@ router.get('/walkers/ratings', async (req, res) => {
         SELECT u.username as walker_username,
         COUNT(r.rating) as total_ratings,
         AVG(r.rating) as average_rating,
-        SELECT 
+        (SELECT COUNT(*) FROM WalkRatings wr JOIN WalkAp
     `);
     res.json(ratings);
 });
