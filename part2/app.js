@@ -21,7 +21,9 @@ app.post('/login', async (req, res) => {
     const { username, password_hash } = req.body;
 
     const[rows] = await db.query(`
-        `)
+        SELECT user_id, username
+        
+    `)
 });
 // Export the app instead of listening here
 module.exports = app;
