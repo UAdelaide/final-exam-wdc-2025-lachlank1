@@ -50,6 +50,7 @@ app.post('/login', async (req, res) => {
 app.get('/logout', (req, res) => {
     // Destroy the session
     req.session.destroy(() => {
+        res.clearCookie('connect.sid'); // clear the session cookie
         res.redirect('/');
     });
 });
