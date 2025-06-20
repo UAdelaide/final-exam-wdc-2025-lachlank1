@@ -37,7 +37,11 @@ app.post('/login', async (req, res) => {
         req.session.userid = user.user_id;
         req.session.role = user.role;
 
-        if (user.role === 'owner')
+        if (user.role === 'owner'){
+            res.redorect('/walker-dashboard.html');
+        }else{
+            re
+        }
 
 
 
