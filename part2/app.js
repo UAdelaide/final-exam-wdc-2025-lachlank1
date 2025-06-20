@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const db = require('./models/db');
+const session = require('express-session');
 require('dotenv').config();
 
 const app = express();
@@ -25,6 +26,7 @@ app.post('/login', async (req, res) => {
     const [rows] = await db.query(`SELECT user_id, username FROM Users WHERE username = ? and password_hash = ?`, [username, password]);
 
     const user = rows[0];
+    
 
 });
 // Export the app instead of listening here
