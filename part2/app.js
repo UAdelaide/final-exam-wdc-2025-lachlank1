@@ -23,7 +23,7 @@ app.post('/login', async (req, res) => {
     const[rows] = await db.query(
         'SELECT * FROM Users WHERE username = ?', [username]
     )
-    console.log('Query result: ', )
+    console.log('Query result: ', rows);
 });
 // Export the app instead of listening here
 module.exports = app;
