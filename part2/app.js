@@ -23,18 +23,7 @@ app.post('/login', async (req, res) => {
     const[rows] = await db.query(
         'SELECT * FROM Users WHERE username = ?', [username]
     )
-
-    const user = rows[0]
-
-    return res.json({
-        message: 'Login succesful',
-        user:{
-            user_id: user.user_id,
-            username: user.username,
-            email: user.email,
-            role: user.role
-        }
-    })
+    console.log('Query result: ', )
 });
 // Export the app instead of listening here
 module.exports = app;
