@@ -24,9 +24,9 @@
                 const loadDogOfTheDay = () => {
                     dogUrl = 'https://dog.ceo/api/breeds/image/random'
                 };
-                return {}
+                return { dogOfTheDay, loadDogOfTheDay };
             }
-        })
+        }).mount('#app');
     </script>
 </body>
 </html>
