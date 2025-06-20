@@ -163,6 +163,6 @@ section {
 }
 
 .inputBox:focus{
-    border-color: rgb(73, 206, 251);
+    border-color: rgb(137, 225, 255);
     box-shadow: rgb(73, 206, 251);
 }
