@@ -14,7 +14,7 @@ router.get('/dogs', async (req, res) => {
 });
 
 router.get('/walkrequests/open', async (req, res) => {
-    const [requests] = await db.query(`
+    const [requestsOpen] = await db.query(`
         SELECT wr.request_id as request_id,
         d.name as dog_name,
         wr.requested_time as requested_time,
@@ -26,11 +26,11 @@ router.get('/walkrequests/open', async (req, res) => {
         JOIN Users u ON d.owner_id = u.user_id
         WHERE wr.status = 'open'
     `);
-    res.json(requests);
+    res.json(requestsOpen);
 });
 
 router.get('/walkers/summary', async (req, res) => {
-    const [summary] = await db.query(`
+    const [walkerSummary] = await db.query(`
         SELECT u.username as walker_username,
         COUNT(r.rating) as total_ratings,
         AVG(r.rating) as average_rating,
@@ -40,7 +40,7 @@ router.get('/walkers/summary', async (req, res) => {
         WHERE u.role = 'walker'
         GROUP BY u.user_id
     `);
-    res.json(summary);
+    res.json(walkerSummary);
 });
 
 module.exports = router;
