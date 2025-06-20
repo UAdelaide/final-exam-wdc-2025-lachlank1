@@ -51,5 +51,8 @@ app.post('/login', async (req, res) => {
         }
 });
 
+app.get('/logout', (req, res) => {
+    // Destroy the session
+    
 // Export the app instead of listening here
 module.exports = app;
