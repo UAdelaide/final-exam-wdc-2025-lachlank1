@@ -44,9 +44,7 @@
         createApp({
             setup() {
                 const dogOfTheDay = ref(null);
-                const loadDogOfTheDay = () => {
-                    dogUrl = 'https://dog.ceo/api/breeds/image/random'
-                };
+                const reponse = await fetch('https://dog.ceo/api/breeds/image/random');
                 return { dogOfTheDay, loadDogOfTheDay };
             }
         }).mount('#app');
