@@ -8,7 +8,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); // 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({
     secret: 'secret_key',
@@ -26,7 +26,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.post('/login', async (req, res) => {
-        //Get username and password from request body
+        // Get username and password from request body
         const { username, password } = req.body;
 
         // Get user details
