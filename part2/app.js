@@ -26,7 +26,13 @@ app.post('/login', (req, res) => {
         }
         // If user is found, return success message
         res.json({ message: 'Login successful', username, password });
-        if 
+        if (results[0].role === 'walker') {
+            res.json({ message: 'Welcome Walker!', username });
+            res.redirect
+        }
+        else if (results[0].role === 'owner') {
+            res.json({ message: 'Welcome Owner!', username });
+        }
     });
 });
 // Export the app instead of listening here
