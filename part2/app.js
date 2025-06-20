@@ -32,14 +32,17 @@ app.post('/login', async (req, res) => {
         // Get user details
         const [rows] = await db.query(`SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);;
 
+        // Check if user exists
         if (rows.length === 0 ){
             return res.status(401).json({ error: "Wrong login" });
         }
+        // Set session variables
         const user = rows[0];
         req.session.userid = user.user_id;
         req.session.username = user.username;
         req.session.role = user.role;
 
+        
         if (user.role === 'owner'){
             res.redirect('/owner-dashboard.html');
         }else{
