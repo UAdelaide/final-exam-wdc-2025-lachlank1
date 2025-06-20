@@ -32,7 +32,7 @@ app.post('/login', async (req, res) => {
         // Get user details
         const [rows] = await db.query(`SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);;
 
-        
+        // if the user exists, set session variables
         const user = rows[0];
         req.session.userid = user.user_id;
         req.session.username = user.username;
