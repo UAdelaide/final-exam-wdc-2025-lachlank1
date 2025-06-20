@@ -58,7 +58,7 @@ app.get('/logout', (req, res) => {
 // route for getting dogs
 
 app.get('/dogs', async (req, res) => {
-    
+    if (!req.session.useri) {
 
 // Export the app instead of listening here
 module.exports = app;
