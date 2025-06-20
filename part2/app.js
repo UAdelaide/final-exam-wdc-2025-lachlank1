@@ -29,7 +29,10 @@ app.post('/login', (req, res) => {
     return res.json({
         message: 'Login succesful',
         user:{
-            user_id: user.user_id
+            user_id: user.user_id,
+            username: user.username,
+            email: user.email,
+            role: user.role
         }
     })
 
