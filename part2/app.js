@@ -30,7 +30,7 @@ app.post('/login', async (req, res) => {
     const [rows] = await db.query(`SELECT user_id, username FROM Users WHERE username = ? and password_hash = ?`, [username, password]);
 
     const user = rows[0];
-    req.session.U
+    req.session.userid = user.user_id;
 
 });
 // Export the app instead of listening here
