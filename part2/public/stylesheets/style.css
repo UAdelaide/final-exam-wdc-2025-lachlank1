@@ -158,5 +158,9 @@ section {
 .inputBox{
     border: 2px solid;
     border-radius: 8px;
-    outline: none;
+    outline: grey;
+}
+
+.inputBox:focus{
+    border-color: lightblue
 }
