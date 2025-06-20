@@ -23,7 +23,8 @@ app.post('/login', (req, res) => {
         if (results.length === 0) {
             return res.status(401).json({ message: 'Invalid username or password' });
         }
-    }
+        
+    });
     res.json({ message: 'Login successful', username, password });
 });
 // Export the app instead of listening here
