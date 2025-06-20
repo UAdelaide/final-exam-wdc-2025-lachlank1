@@ -38,6 +38,7 @@ router.get('/walkers/ratings', async (req, res) => {
         FROM Users u
         JOIN WalkRatings r ON u.user_id = r.walker_id
         WHERE u.role = 'walker'
+        GROUP BY u.user_id
     `);
     res.json(ratings);
 });
