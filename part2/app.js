@@ -50,7 +50,8 @@ app.post('/login', async (req, res) => {
             res.redirect('/walker-dashboard.html');
         }
     } catch (error) {
-        res.status(500).json
+        res.status(500).json({ error: 'Unsuccesfull login'});
+    }
 });
 // Export the app instead of listening here
 module.exports = app;
