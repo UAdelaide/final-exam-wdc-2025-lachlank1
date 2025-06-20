@@ -25,6 +25,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.post('/login', async (req, res) => {
+    const { username, password_hash } = req.body;
     try{
         // Get username and password from request body
         const { username, password_hash } = req.body;
@@ -32,7 +33,7 @@ app.post('/login', async (req, res) => {
 
         if (rows.length === 0 ){
             return res.status(401).json({error: "Wrong login"});
-            
+
         }
         const user = rows[0];
         req.session.userid = user.user_id;
