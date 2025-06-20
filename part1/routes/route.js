@@ -29,7 +29,7 @@ router.get('/walkrequests/open', async (req, res) => {
     res.json(requests);
 });
 
-router.get('/walkers/ratings', async (req, res) => {
+router.get('/walkers/summary', async (req, res) => {
     const [ratings] = await db.query(`
         SELECT u.username as walker_username,
         COUNT(r.rating) as total_ratings,
