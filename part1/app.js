@@ -104,7 +104,7 @@ let db;
     const [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (userRows[0].count === 0) {
       await db.execute(`
-        INSERT INTO Users (username, email, password_hash, role) VALUE
+        INSERT INTO Users (username, email, password_hash, role) VALUES
         ('alice123', 'alice@example.com', 'hashed123', 'owner'),
         ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
@@ -112,7 +112,7 @@ let db;
         ('hello', 'hello@gmail.com', 'hashed666', 'walker')
       `);
     }
-    
+
     // Insert data if table is empty
     // const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
     // if (rows[0].count === 0) {
@@ -126,7 +126,7 @@ let db;
     const [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
     if (dogRows[0].count === 0){
         await db.exectute(`
-
+            
         `);
     }
   } catch (err) {
