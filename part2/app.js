@@ -35,8 +35,6 @@ app.post('/login', (req, res) => {
             role: user.role
         }
     })
-
-    });
 });
 // Export the app instead of listening here
 module.exports = app;
