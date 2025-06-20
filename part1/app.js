@@ -51,6 +51,9 @@ let db;
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
     `);
+    await db.execute(`
+        CREATE TABLE IF NOT EXISTS Dogs (
+        
     // Insert data if table is empty
     const [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (userRows[0].count === 0) {
@@ -76,7 +79,7 @@ let db;
     const [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
     if (dogRows[0].count === 0){
         await db.exectute(`
-            
+
         `);
     }
   } catch (err) {
