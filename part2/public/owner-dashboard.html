@@ -36,7 +36,7 @@
           <div class="mb-3">
             <label class="dogOptions">Select Your Dog</label>
             <!--Drop down box using select tag-->
-              <select id ="doOptions" v-model="selectedDog">
+              <select id ="doOptions" v-model="form.dog_id">
                 <option disabled value="">-- Choose a dog --</option>
                 <option v-for="dog in dogs" :key="dog.dog_id" :value="dog.dog_id">
                   {{ dog.name }}
