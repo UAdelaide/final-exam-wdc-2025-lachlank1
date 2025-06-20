@@ -26,9 +26,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.post('/login', async (req, res) => {
-    try{
-        //Get username and password from request bod
-
+        //Get username and password from request body
         const { username, password } = req.body;
 
         // Get user details
