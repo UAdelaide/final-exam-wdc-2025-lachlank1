@@ -21,6 +21,10 @@ router.get('/walkrequets/open', async (req, res) => {
         wr.duration_minutes as duration_minutes,
         wr.location as location,
         Join Dogs d ON wr.dog_id = d.dog_id
-        
+        Join  Users u ON d.owner_id = u.user_id
+        WHERE wr.status = 'open'
+    `);
+    res.json(requests);
+});
 
 module.exports = router;
