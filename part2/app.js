@@ -22,8 +22,9 @@ app.post('/login', (req, res) => {
 
     db.query('SELECT * FROM Users WHERE username = ? AND password_hash = ?', [username, password], (err,results) => {
         if (err) {
-            return r
+            return res.status(500).json({ error: 'Database error' });
         }
+        
     });
 });
 // Export the app instead of listening here
