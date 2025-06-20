@@ -60,7 +60,9 @@ let db;
             FOREIGN KEY (owner_id) REFERENCES Users(user_id)
         );
     `);
-    
+    await db.execute(`
+        
+
     // Insert data if table is empty
     const [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (userRows[0].count === 0) {
