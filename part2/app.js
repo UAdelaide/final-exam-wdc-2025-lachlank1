@@ -57,7 +57,8 @@ app.get('/logout', (req, res) => {
 
 // route for getting dogs
 
-app.get('/dogs')
+app.get('/dogs', async (req, res) => {
+    
 
 // Export the app instead of listening here
 module.exports = app;
