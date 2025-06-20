@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Dog Fanpage</title>
-    <script src = "https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <style>
     body
 </style>
+
 <body>
-    <div id =  "app">
+    <div id="app">
         <h1>Lochie's Dog Walking Service</h1>
         <p>Welcome to Lochie's Dog Walking Service!</p>
 
-        <button type = "button" @click="loadDogOfTheDay">Dog of the day</button>
+        <button type="button" @click="loadDogOfTheDay">Dog of the day</button>
     </div>
 
 
     <script>
-        const {createApp, ref} = Vue;
+        const { createApp, ref } = Vue;
         createApp({
-            setup(){
+            setup() {
                 const dogOfTheDay = ref(null);
                 const loadDogOfTheDay = () => {
                     dogUrl = 'https://dog.ceo/api/breeds/image/random'
@@ -29,4 +31,5 @@
         }).mount('#app');
     </script>
 </body>
+
 </html>
