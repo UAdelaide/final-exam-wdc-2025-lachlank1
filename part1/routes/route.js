@@ -21,7 +21,7 @@ router.get('/walkrequests/open', async (req, res) => {
         wr.duration_minutes as duration_minutes,
         wr.location as location,
         FROM WalkRequests wr
-       
+        JOIN Dogs d ON wr.dog
         WHERE wr.status = 'open'
     `);
     res.json(requests);
