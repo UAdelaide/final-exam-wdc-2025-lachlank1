@@ -35,7 +35,7 @@ app.post('/login', async (req, res) => {
 
         // Check if user exists
         if (rows.length === 0 ){
-            return res.status(401).json({ error: "Wrong login" });
+            res.redirect('/');
         }
         // Set session variables
         const user = rows[0];
