@@ -35,7 +35,8 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="dogOptions">Select Your Dog</label>
-              <select id ="doOptions" v-model
+              <select id ="doOptions" v-model="selectedDog">
+                <option disabled value="'"
             <!-- <input v-model="form.dog_id" type="number" class="form-control" required> -->
           </div>
           <div class="mb-3">
