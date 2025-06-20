@@ -33,10 +33,10 @@ app.post('/login', async (req, res) => {
         const [rows] = await db.query(`SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);;
 
         // Check if user exists
-        if (rows.length === 0 ){
-            res.sendStatus(401).json({ error: 'Invalid username or password' });
-            return;
-        }
+        // if (rows.length === 0 ){
+        //     res.sendStatus(401).json({ error: 'Invalid username or password' });
+        //     return;
+        // }
         // Set session variables
         const user = rows[0];
         req.session.userid = user.user_id;
