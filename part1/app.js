@@ -53,7 +53,14 @@ let db;
     `);
     await db.execute(`
         CREATE TABLE IF NOT EXISTS Dogs (
-        
+            dog_id INT AUTO_INCREMENT PRIMARY KEY,
+            owner_id INT NOT NULL,
+            name VARCHAR(50) NOT NULL,
+            size ENUM('small', 'medium', 'large') NOT NULL,
+            FOREIGN KEY (owner_id) REFERENCES Users(user_id)
+        );
+    `);
+    
     // Insert data if table is empty
     const [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (userRows[0].count === 0) {
