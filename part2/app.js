@@ -20,7 +20,7 @@ app.post('/login', (req, res) => {
     // Get username and password from request body
     const { username, password } = req.body;
 
-
+    const[rows] = awaiit 
 
     });
 });
