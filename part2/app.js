@@ -25,8 +25,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.post('/login', async (req, res) => {
-    // try{
-        // Get username and password from request body
+    //     Get username and password from request body
         const { username, password } = req.body;
         const [rows] = await db.query(`SELECT username, role FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);
 
@@ -38,9 +37,9 @@ app.post('/login', async (req, res) => {
         req.session.role = user.role;
 
         if (user.role === 'owner'){
-            res.redorect('/walker-dashboard.html');
+            res.redorect('/owner-dashboard.html');
         }else{
-            re
+            res.redirect('/walker-dashboard.html');
         }
 
 
