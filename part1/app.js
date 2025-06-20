@@ -73,7 +73,8 @@ let db;
     //     ('Brave New World', 'Aldous Huxley')
     //   `);
     // }
-    const [dogRows]
+    const [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    if (dogRows)
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
