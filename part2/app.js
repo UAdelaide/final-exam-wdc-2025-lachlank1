@@ -27,7 +27,8 @@ app.use('/api/users', userRoutes);
 
 app.post('/login', async (req, res) => {
     try{
-        //Get username and password from request body
+        //Get username and password from request bod
+
         const { username, password } = req.body;
 
         // Get user details
