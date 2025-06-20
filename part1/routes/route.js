@@ -29,6 +29,8 @@ router.get('/walkrequests/open', async (req, res) => {
     res.json(requests);
 });
 
-
+router.get('/walkers/ratings', async (req, res) => {
+    const [ratings] = await db.query(`
+        
 
 module.exports = router;
