@@ -20,7 +20,9 @@ app.post('/login', async (req, res) => {
     // Get username and password from request body
     const { username, password_hash } = req.body;
     const [rows] = await db.query(`SELECT user_id, username FROM Users WHERE username = ? and password_hash = ?`, [username, password]);
-    
+
+    const user = rows[0];
+    req.session.userId = user_id
 });
 // Export the app instead of listening here
 module.exports = app;
