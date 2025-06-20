@@ -1,16 +1,16 @@
 const express = require('express');
 const path = require('path');
 const db = require('./models/db');
-const session = require('express-session');
+const session = require('express-session'); // import session middeware
 require('dotenv').config();
 
 const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: false })); // 
+app.use(express.urlencoded({ extended: false })); // parse json and urlencoded bodies
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(session({
+app.use(session({ // set up session middleware
     secret: 'secret_key',
     resave: false,
     saveUninitialized: false,
