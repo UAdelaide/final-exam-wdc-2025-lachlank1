@@ -137,7 +137,7 @@ let db;
     const [requestRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
     if (requestRows[0].count === 0) {
         await db.execute(`
-            `)
+            INSER INTO WalkReques`)
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
