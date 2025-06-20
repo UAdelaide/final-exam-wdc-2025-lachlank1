@@ -4,10 +4,10 @@ var db = require('../db'); // Import the database connection
 
 router.get('/dogs', async (req, res) => {
     const [dogs] = await db.query(`
-        SELECT d.name as dog_name,
+        SELECT d.name AS dog_name,
         FROM Dogs d
-        SELECT d.size as size,
+        SELECT d.size AS size,
         FROM Dogs d
-        JOIN Users u ON d.owner_id = u.user_name 
+        JOIN Users u ON d.owner_id = u.user_name AS owner_name
 
     `)
