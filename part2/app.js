@@ -33,7 +33,7 @@ app.post('/login', (req, res) => {
         // else if (results[0].role === 'owner') {
         //     res.redirect('/owner-dashboard.html');
         // }
-        res.redirect('')
+        res.redirect('/owner-dashboard.html');
     });
 });
 // Export the app instead of listening here
