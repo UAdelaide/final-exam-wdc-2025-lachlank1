@@ -27,10 +27,10 @@ app.post('/login', (req, res) => {
         // If user is found, return success message
         res.json({ message: 'Login successful', username, password });
         if (results[0].role === 'walker') {
-            res.redirect('/walker-dashboard.html')
+            res.redirect('/walker-dashboard.html');
         }
         else if (results[0].role === 'owner') {
-            res.redirect('/owner-dashboard.html')
+            res.redirect('/owner-dashboard.html');
         }
     });
 });
