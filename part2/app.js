@@ -16,8 +16,10 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.post('/login', (req, res) => {
-    // Handle login logic here
+    // Get username and password from request body
     const { username, password } = req.body;
+
+    
     res.json({ message: 'Login successful', username, password });
 });
 // Export the app instead of listening here
