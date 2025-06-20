@@ -24,7 +24,7 @@ app.post('/login', (req, res) => {
         if (err) {
             return res.status(500).json({ error: 'Database error' });
         }
-    ``
+        
     });
 });
 // Export the app instead of listening here
