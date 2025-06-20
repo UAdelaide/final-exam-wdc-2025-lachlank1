@@ -141,7 +141,7 @@
         onMounted(() => {
           loadWalks();
           const res = fetch('/dogs');
-          
+          dogs.value = res.json();
         });
 
         return {
@@ -149,6 +149,8 @@
           walks,
           message,
           error,
+          dogs,
+          selectedDog,
           submitWalkRequest
         };
       }
