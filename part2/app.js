@@ -61,5 +61,6 @@ app.get('/dogs', async (req, res) => {
     const [rows] = await db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id = ?`, [req.session.userid]);
     res.json(rows);
 });
+
 // Export the app instead of listening here
 module.exports = app;
