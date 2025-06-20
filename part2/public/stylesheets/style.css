@@ -162,5 +162,5 @@ section {
 }
 
 .inputBox:focus{
-    border-color: lightblue
+    border-color: rgb(73, 206, 251)
 }
