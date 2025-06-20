@@ -18,7 +18,6 @@ app.use('/api/users', userRoutes);
 app.post('/login', (req, res) => {
     // Handle login logic here
     const { username, password } = req.body;
-    // For simplicity, just echo back the credentials
     res.json({ message: 'Login successful', username, password });
 });
 // Export the app instead of listening here
