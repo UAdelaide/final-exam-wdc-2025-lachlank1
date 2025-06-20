@@ -50,9 +50,6 @@
                         const data = await response.json();
                         dogOfTheDay.value = data.message;
                 };
-                const reponse = await fetch('https://dog.ceo/api/breeds/image/random');
-                const data = await reponse.json();
-                dogOfTheDay.value = data.message;
                 return { dogOfTheDay, loadDogOfTheDay };
             }
         }).mount('#app');
