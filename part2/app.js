@@ -21,7 +21,7 @@ app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
     const[rows] = await db.query(
-        'SELECT * FROM '
+        'SELECT * FROM Users WHERE username = ?' 
     )
 
     });
