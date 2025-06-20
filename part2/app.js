@@ -20,7 +20,6 @@ app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
     db.query('SELECT FROM Users WHERE username = ? and password = ?', [username, password])
-    
     res.json({ message: 'Login successful', username, password });
 });
 // Export the app instead of listening here
