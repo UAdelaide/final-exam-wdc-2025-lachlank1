@@ -136,9 +136,10 @@
 
         onMounted(async () => {
           loadWalks();
-          const res = await fetch('/dogs'); // get dogs route as json response
+          const res = await fetch('/dogs');
           dogs.value = await res.json();
         });
+        // get dogs route as json response
 
         return {
           form,
