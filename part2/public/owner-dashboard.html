@@ -140,6 +140,8 @@
 
         onMounted(() => {
           loadWalks();
+          const res = fetch('/dogs');
+          
         });
 
         return {
