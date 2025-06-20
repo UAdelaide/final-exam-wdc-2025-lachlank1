@@ -30,7 +30,9 @@ app.post('/login', async (req, res) => {
         const { username, password_hash } = req.body;
         const [rows] = await db.query(`SELECT user_id, username FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);
 
-        if (rows.length === 0 )
+        if (rows.length === 0 ){
+            return res.status(401).json({error: })
+        }
         const user = rows[0];
         req.session.userid = user.user_id;
 
