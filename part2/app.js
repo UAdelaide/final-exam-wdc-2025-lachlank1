@@ -26,7 +26,7 @@ app.post('/login', (req, res) => {
 
     const user = rows[0]
 
-    if (user.password_hash !== password_hash)
+    return res.j
 
     });
 });
