@@ -33,8 +33,10 @@ app.post('/login', async (req, res) => {
         if (rows.length === 0 ){
             return res.status(401).json({error: "Wrong login"});
         }
-        // const user = rows[0];
-        // req.session.userid = user.user_id;
+        const user = rows[0];
+        req.session.userid = user.user_id;
+
+        
 
     // }catch
 });
