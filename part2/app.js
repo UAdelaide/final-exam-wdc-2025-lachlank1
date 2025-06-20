@@ -24,6 +24,7 @@ app.post('/login', (req, res) => {
         if (results.length === 0) {
             return res.status(401).json({ message: 'Invalid username or password' });
         }
+        if (err) return res.status(500).send("")
         // If user is found, return success message
         res.json({ message: 'Login successful', username, password });
         if (results[0].role === 'walker') {
