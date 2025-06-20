@@ -73,7 +73,7 @@ let db;
         );
     `);
     await db.execute(`
-        
+        CREATE TALB IF NOT EXISTS 
 
     // Insert data if table is empty
     const [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
