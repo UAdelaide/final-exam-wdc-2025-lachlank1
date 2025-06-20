@@ -55,5 +55,9 @@ app.get('/logout', (req, res) => {
     });
 });
 
+// route for getting dogs
+
+
+
 // Export the app instead of listening here
 module.exports = app;
