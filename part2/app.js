@@ -26,7 +26,12 @@ app.post('/login', (req, res) => {
 
     const user = rows[0]
 
-    return res.j
+    return res.json({
+        message: 'Login succesful',
+        user:{
+            user_id: user.user_id
+        }
+    })
 
     });
 });
