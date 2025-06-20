@@ -156,5 +156,7 @@ section {
 }
 
 .inputBox{
-    bo
+    border: 2px solid;
+    border-radius: 8px;
+    outline: none;
 }
