@@ -41,7 +41,7 @@ let db;
     });
 
     // Create a table if it doesn't exist
-      await db.execute(`
+    await db.execute(`
         CREATE TABLE IF NOT EXISTS Users (
             user_id INT AUTO_INCREMENT PRIMARY KEY,
             username VARCHAR(50) UNIQUE NOT NULL,
@@ -51,17 +51,29 @@ let db;
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
     `);
-
     // Insert data if table is empty
-    const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
+    const [uows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (rows[0].count === 0) {
       await db.execute(`
-        INSERT INTO books (title, author) VALUES
-        ('1984', 'George Orwell'),
-        ('To Kill a Mockingbird', 'Harper Lee'),
-        ('Brave New World', 'Aldous Huxley')
+        INSERT INTO Users (username, email, password_hash, role) VALUE
+        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
+        ('lachlankeep', 'lachlan@lachlan.com', 'hashed420', 'owner'),
+        ('hello', 'hello@gmail.com', 'hashed666', 'walker')
       `);
     }
+    // Insert data if table is empty
+    // const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
+    // if (rows[0].count === 0) {
+    //   await db.execute(`
+    //     INSERT INTO books (title, author) VALUES
+    //     ('1984', 'George Orwell'),
+    //     ('To Kill a Mockingbird', 'Harper Lee'),
+    //     ('Brave New World', 'Aldous Huxley')
+    //   `);
+    // }
+
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
