@@ -26,6 +26,7 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.post('/login', async (req, res) => {
+    try{
         //Get username and password from request body
         const { username, password } = req.body;
 
@@ -42,12 +43,14 @@ app.post('/login', async (req, res) => {
         req.session.username = user.username;
         req.session.role = user.role;
 
-        
+        // Redirect based on user role
         if (user.role === 'owner'){
             res.redirect('/owner-dashboard.html');
         }else{
             res.redirect('/walker-dashboard.html');
         }
+    } catch (error) {
+        
 });
 // Export the app instead of listening here
 module.exports = app;
