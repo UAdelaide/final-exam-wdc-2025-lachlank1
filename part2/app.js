@@ -20,7 +20,7 @@ app.post('/login', (req, res) => {
     // Get username and password from request body
     const { username, password } = req.body;
 
-    db.query('SELECT * FROM Users WHERE username = ? AND password = ?', [username, password], (err,results) => {
+    db.query('SELECT * FROM Users WHERE username = ? AND password_hash = ?', [username, password], (err,results) => {
         if (results.length === 0) {
             return res.status(401).json({ message: 'Invalid username or password' });
         }
