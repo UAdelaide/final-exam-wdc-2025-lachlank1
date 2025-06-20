@@ -57,7 +57,7 @@ app.get('/logout', (req, res) => {
 
 // route for getting dogs
 app.get('/dogs', async (req, res) => {
-    // get the users dogs and name
+    // get the users dogs id and name
     const [rows] = await db.query(`SELECT dog_id, name FROM Dogs WHERE owner_id = ?`, [req.session.userid]);
     res.json(rows);
 });
