@@ -131,7 +131,7 @@ let db;
             ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
             ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Sam', 'large'),
             ((SELECT user_id FROM Users WHERE username = 'lachlankeep'), 'pibble', 'small'),
-            ((SELECT user_id FROM Users WHERE username = 'hello'), 'hidog', 'small'),
+            ((SELECT user_id FROM Users WHERE username = 'hello'), 'hidog', 'small')
         `);
     }
     const [requestRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
@@ -142,8 +142,7 @@ let db;
             ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
             ((SELECT dog_id FROM Dogs WHERE name = 'pibble'), '2025-06-10 09:30:00', 15, 'North Terrace', 'open'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Sam'), '2025-07-10 09:30:00', 60, 'Glandore', 'cancelled'),
-            ((SELECT dog_id FROM Dogs WHERE name = 'hidog'), '2025-06-11 09:00:00', 23, 'Glenelg', 'open'),
-            
+            ((SELECT dog_id FROM Dogs WHERE name = 'hidog'), '2025-06-11 09:00:00', 23, 'Glenelg', 'open')
         `)
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
