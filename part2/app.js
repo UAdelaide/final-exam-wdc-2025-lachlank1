@@ -16,7 +16,7 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-app.post('/login', (req, res) => {
+app.post('/login', async (req, res) => {
     // Get username and password from request body
     const { username, password_hash } = req.body;
 
