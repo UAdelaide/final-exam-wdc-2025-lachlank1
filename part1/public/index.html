@@ -15,6 +15,7 @@
             min-height: 2000vh;
             display: flex;
         }
+        .bottom
         button{
             background-color: rgb(79, 255, 79);
             font-family: 'Arial';
@@ -77,8 +78,9 @@ Suspendisse porta, arcu convallis eleifend euismod, odio leo rhoncus dui, nec ph
 Nulla pretium, nisi nec lobortis cursus, mauris erat fermentum felis, sit amet maximus nunc dolor eu elit. Nunc vitae dolor at metus lacinia laoreet a vitae nisl. Proin bibendum eros felis, laoreet cursus magna scelerisque ac. Suspendisse auctor magna ornare sagittis sollicitudin. Integer pharetra volutpat posuere. Vivamus quis facilisis mauris. Nunc nunc ipsum, suscipit et fermentum non, laoreet in justo. Mauris eleifend lorem ipsum, quis varius sapien fermentum a. Nunc vel tortor elementum, rutrum magna sit amet, volutpat turpis. Duis in purus finibus, egestas turpis quis, porta massa. Nullam id nunc a ligula tristique malesuada. Aenean faucibus eget libero vitae vestibulum. Nunc ipsum quam, fringilla in sapien id, auctor molestie nisi. Maecenas interdum rutrum nulla, et ultricies purus tempus et.</p>
         <br>
 
-        <div class = "bottomOfPage"
-        <button type="button" @click="loadDogOfTheDay">DOG</button>
+        <div class = "bottomOfPage">
+            <button type="button" @click="loadDogOfTheDay">DOG</button>
+        </div>
         <div v-if = "dogOfTheDay">
             <img :src="dogOfTheDay"/>
         </div>
