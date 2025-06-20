@@ -18,11 +18,12 @@ app.use('/api/users', userRoutes);
 
 app.post('/login', (req, res) => {
     // Get username and password from request body
-    const { username, password } = req.body;
+    const { username, password_hash } = req.body;
 
     const[rows] = await db.query(
-        'SELECT * FROM Users WHERE username = ?' 
+        'SELECT * FROM Users WHERE username = ?', [username]
     )
+    
 
     });
 });
