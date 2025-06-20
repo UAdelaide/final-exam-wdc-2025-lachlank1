@@ -33,7 +33,7 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ error: "Wrong login" });
         }
         const user = rows[0];
-        req.session.userid = user.user_id;
+        req.session.username = user.username;
         req.session.role = user.role;
 
         if (user.role === 'owner'){
