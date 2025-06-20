@@ -58,6 +58,6 @@ app.get('/logout', (req, res) => {
 // route for getting dogs
 
 app.get('/dogs', async (req, res) => {
-    const [rows] 
+    const [rows] = await db.query(`SELECT  )
 // Export the app instead of listening here
 module.exports = app;
