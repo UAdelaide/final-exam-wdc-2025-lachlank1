@@ -26,12 +26,11 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 app.post('/login', async (req, res) => {
-    //Get username and password from request body
+        //Get username and password from request body
         const { username, password } = req.body;
 
-        const [rows] = await db.query(`SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);
-
-        console.log('Result:', rows);
+        // Get user details
+        const [rows] = await db.query(`SELECT user_id, username, role FROM Users WHERE username = ? AND password_hash = ?`, [username, password]);;
 
         if (rows.length === 0 ){
             return res.status(401).json({ error: "Wrong login" });
