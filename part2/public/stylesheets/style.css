@@ -159,9 +159,10 @@ section {
     border: 2px solid;
     border-radius: 8px;
     outline: none;
-    
+
 }
 
 .inputBox:focus{
     border-color: rgb(73, 206, 251)
+    border-shadow: 
 }
