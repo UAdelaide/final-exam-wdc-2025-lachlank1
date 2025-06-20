@@ -13,5 +13,8 @@ router.get('/dogs', async (req, res) => {
     res.json(dogs);
 });
 
-router.get('/walkrequets/open')
+router.get('/walkrequets/open', async (req, res) => {
+    const [requests] = await db.query(`
+        SELECT wr.request_id,
+        wr.date,
 module.exports = router;
