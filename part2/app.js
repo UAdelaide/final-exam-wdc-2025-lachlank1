@@ -35,6 +35,9 @@ app.post('/login', async (req, res) => {
         }
         const user = rows[0];
         req.session.userid = user.user_id;
+        req.session.role = user.role;
+
+        if (user.role === 'owner')
 
 
 
