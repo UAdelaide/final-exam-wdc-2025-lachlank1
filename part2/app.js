@@ -21,19 +21,7 @@ app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
     db.query('SELECT * FROM Users WHERE username = ? AND password_hash = ?', [username, password], (err,results) => {
-        // if (results.length === 0) {
-        //     return res.status(401).json({ message: 'Invalid username or password' });
-        // }
-        if (err) return res.status(500).send('Database error');
-        // If user is found, return success message
-        // res.json({ message: 'Login successful', username, password });
-        // if (results[0].role === 'walker') {
-        //     res.redirect('/walker-dashboard.html');
-        // }
-        // else if (results[0].role === 'owner') {
-        //     res.redirect('/owner-dashboard.html');
-        // }
-        res.redirect('/owner-dashboard.html');
+        
     });
 });
 // Export the app instead of listening here
