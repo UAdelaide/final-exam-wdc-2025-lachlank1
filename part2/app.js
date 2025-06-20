@@ -8,6 +8,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(session())
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
@@ -22,7 +23,7 @@ app.post('/login', async (req, res) => {
     const [rows] = await db.query(`SELECT user_id, username FROM Users WHERE username = ? and password_hash = ?`, [username, password]);
 
     const user = rows[0];
-    
+
 });
 // Export the app instead of listening here
 module.exports = app;
