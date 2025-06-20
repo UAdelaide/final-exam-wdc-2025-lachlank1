@@ -30,7 +30,7 @@ router.get('/walkrequests/open', async (req, res) => {
 });
 
 router.get('/walkers/summary', async (req, res) => {
-    const [ratings] = await db.query(`
+    const [summary] = await db.query(`
         SELECT u.username as walker_username,
         COUNT(r.rating) as total_ratings,
         AVG(r.rating) as average_rating,
@@ -40,7 +40,7 @@ router.get('/walkers/summary', async (req, res) => {
         WHERE u.role = 'walker'
         GROUP BY u.user_id
     `);
-    res.json(ratings);
+    res.json(summary);
 });
 
 module.exports = router;
