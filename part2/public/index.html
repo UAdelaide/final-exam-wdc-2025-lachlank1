@@ -72,7 +72,7 @@
         }
       },
       mounted(){
-        fetch('/api/dogs', { // fetch dog api route
+        fetch('/api/dogs', { // fetch dog api route from app.js
           credentials: 'include' // include for cookies
         })
           .then(res => res.json())
