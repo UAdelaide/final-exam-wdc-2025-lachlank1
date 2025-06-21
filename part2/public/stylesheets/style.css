@@ -6,7 +6,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    
+
 }
 
 header {
@@ -166,9 +166,5 @@ section {
 .inputBox:focus{
     border-color: rgb(137, 225, 255);
     box-shadow: rgb(73, 206, 251);
-}
-
-.login{
-    margin-left: 140px;
 }
 
