@@ -62,9 +62,7 @@ app.get('/dogs', async (req, res) => {
     res.json(rows);
 });
 
-app.get('/api/users/me', async (req, res) => {
-    
-})
+async getCurrentUs
 
 // Export the app instead of listening here
 module.exports = app;
