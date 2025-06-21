@@ -26,7 +26,7 @@ const part1MessagesRoute = require ('../part1/routes/messages.js'); // Added to 
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api)
+app.use('/api
 
 // login route
 app.post('/login', async (req, res) => {
