@@ -62,7 +62,7 @@ app.get('/dogs', async (req, res) => {
     res.json(rows);
 });
 
-app.get('/api/users/me', (req, res) => {
+app.get('/api/users/me', (req, res) => { // Route for getting current user
     res.json({
         userid: req.session.userid,
         username: req.session.username,
