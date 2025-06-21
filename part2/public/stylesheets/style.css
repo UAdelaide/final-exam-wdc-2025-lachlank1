@@ -173,5 +173,7 @@ section {
     padding: 8px;
 }
 
-.table tr 
+.table tr tr:nth-child(even){
+    background-color: #f2f2f2;
+}
 
