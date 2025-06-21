@@ -64,7 +64,8 @@ app.get('/dogs', async (req, res) => {
 
 async function getCurrentUser(){
     const response = await fetch('/api/users/me',P
-        method: 'GET'
+        method: 'GET',
+        
     )
 }
 
