@@ -65,7 +65,7 @@
           }
         }
 
-        async function applyToWalk(requestId) { // Remove hardcoded user
+        async function applyToWalk(requestId) {  // Removed hard coded use and depends on getCurrentUser(); instead
           try {
             const user = await getCurrentUser();
             const res = await fetch(`/api/walks/${requestId}/apply`, {
