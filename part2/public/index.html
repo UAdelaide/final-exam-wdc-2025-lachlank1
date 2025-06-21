@@ -46,7 +46,7 @@
           <td>{{ dog.size }}</td>
           <td>{{ dog.owner_id }}</td>
           <td v-if = "dogOfTheDay">
-            <img :src="dogOfTheDay" alt = "Dog of The Day"/>
+            <img :src= "https://dog.ceo/api/breeds/image/random'" alt = "Dog of The Day"/>
           </td>
         </tr>
       </table>
