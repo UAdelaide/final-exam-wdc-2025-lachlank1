@@ -33,7 +33,7 @@
         <h2>All Registered Dogs</h2>
         <table v-if="dogs.length > 0" class = "table"> <!--Table for dogs-->
           <tr>
-            <th>Dog ID</th> <!--Headings done per penny's video, not the -->
+            <th>Dog ID</th> <!--Headings done per penny's video, not the original db query-->
             <th>Name</th>
             <th>Size</th>
             <th>Owner ID</th>
@@ -46,6 +46,7 @@
             <td>{{ dog.owner_id }}</td>
             <td>
               <img v-if="dog.image" :src="dog.image" alt="Dog of The Day" style="max-width:70px; max-height:70px"/>
+              <!--Get image for dog from api-->
             </td>
           </tr>
         </table>
