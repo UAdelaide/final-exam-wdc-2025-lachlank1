@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 // POST an application to walk a dog (from walker)
 router.post('/:id/apply', async (req, res) => {
   const requestId = req.params.id;
-  const { walker_id } = req.session.user.userid;
+  const walker_id = req.session.user.userid;
 
   try {
     await db.query(`
@@ -58,7 +58,7 @@ router.post('/:id/apply', async (req, res) => {
     res.status(500).json({ error: 'Failed to apply for walk' });
   }
 
-  
+
 });
 
 module.exports = router;
