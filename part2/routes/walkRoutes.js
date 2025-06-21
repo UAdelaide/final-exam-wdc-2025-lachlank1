@@ -41,7 +41,7 @@ router.post('/:id/apply', async (req, res) => {
   const walker_id = req.session.userid; // Changed for session
 
   if (!walker_id){
-    return res.status(401).json({error: 'Not logged in'});
+    return res.status(401).json({ error: 'Not logged in' });
   }
   try {
     await db.query(`
