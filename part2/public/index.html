@@ -51,28 +51,6 @@
     <br>
     <button type = "submit">Login</button> <!--submit form button-->
   </form>
-<!--
-  <div class = "registerDogs">
-      <h2>All Registered Dogs</h2>
-      <table v-if="dogs.length > 0">
-        <tr>
-          <th>Dog ID</th>
-          <th>Name</th>
-          <th>Size</th>
-          <th>Owner ID</th>
-          <th>Photo</th>
-        </tr>
-        <tr v-for="dog in dogs" :key="dog.dog_id">
-          <td>{{ dog.dog_id }}</td>
-          <td>{{ dog.dog_name }}</td>
-          <td>{{ dog.size }}</td>
-          <td>{{ dog.owner_id }}</td>
-          <td>
-            <img v-if="dogOfTheDay" :src="dogOfTheDay" alt="Dog of The Day"/>
-          </td>
-        </tr>
-      </table>
-  </div> -->
 
   <script>
     const { createApp } = Vue;
