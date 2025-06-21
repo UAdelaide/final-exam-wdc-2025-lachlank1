@@ -50,9 +50,9 @@
         fetch('/api/dogs', {
           credentials: 'include' // include for cookies
         })
-        .then(res => res.json)
+        .then(res => res.json())
         .then(data => this.dogs => data
-        })
+        }
     }).mount('#app');
   </script>
 
