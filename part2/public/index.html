@@ -47,7 +47,9 @@
         };
       }
       mounted(){
-        fetch()
+        fetch('/api/dogs', {
+          credentials: 'include'
+        })
       }
       }
     }).mount('#app');
