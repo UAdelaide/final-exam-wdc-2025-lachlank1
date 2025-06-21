@@ -57,6 +57,8 @@ router.post('/:id/apply', async (req, res) => {
     console.error('SQL Error:', error);
     res.status(500).json({ error: 'Failed to apply for walk' });
   }
+
+  
 });
 
 module.exports = router;
