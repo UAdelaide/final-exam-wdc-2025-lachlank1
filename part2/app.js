@@ -74,7 +74,7 @@ app.get('/api/users/me', (req, res) => { // Route for getting current user
     });
 });
 
-app.get('/dogs/', async (req, res) => {
+app.get('/api/dogs', async (req, res) => {
     const [dogs] = await db.query(`
         SELECT d.name AS dog_name,
         d.size AS size,
