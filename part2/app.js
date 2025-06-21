@@ -3,7 +3,7 @@ const path = require('path');
 const db = require('./models/db');
 const session = require('express-session'); // import session middeware
 require('dotenv').config();
-const 
+const part1MessagesRoute = require ('../part1/routes/messages.js')
 
 const app = express();
 
