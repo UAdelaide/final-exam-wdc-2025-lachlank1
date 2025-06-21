@@ -84,7 +84,9 @@
           }
         }
 
-        async function 
+        async function getCurrentUser(){
+          const res = await fetch ('/api/user/me')
+        }
 
         onMounted(() => {
           loadWalkRequests();
