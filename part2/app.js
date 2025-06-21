@@ -62,7 +62,7 @@ app.get('/dogs', async (req, res) => {
     res.json(rows);
 });
 
-app.get('/api/users/me', req, res ={
+app.get('/api/users/me', (req, res) => {
     res.json(req.session.user);
 })
 
