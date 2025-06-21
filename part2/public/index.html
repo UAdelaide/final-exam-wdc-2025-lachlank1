@@ -74,8 +74,8 @@
         fetch('/api/dogs', { // fetch dog api
           credentials: 'include' // include for cookies
         })
-        .then(res => res.json())
-        .then(data => this.dogs = data) // send dog results
+          .then(res => res.json())
+          .then(data => this.dogs = data) // send dog results
         this.loadDogOfTheDay();
         }
     }).mount('#app');
