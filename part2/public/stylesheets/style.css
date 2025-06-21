@@ -168,8 +168,7 @@ section {
     box-shadow: rgb(73, 206, 251);
 }
 
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
+.table td, .table th{
+
 }
 
