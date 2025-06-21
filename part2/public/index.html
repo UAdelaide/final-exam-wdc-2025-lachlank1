@@ -60,15 +60,12 @@
         };
       },
 
-      methods:{}
-      setup(){ // Load dog of the day from image and put into table
-          const dogOfTheDay = ref(null);
-          const loadDogOfTheDay = async () => {
+      methods:{
+        async loadDogOfTheDay(){
             const response = await fetch('https://dog.ceo/api/breeds/image/random');
             const data = await response.json();
             dogOfTheDay.value = data.message;
-          };
-          return { dogOfTheDay, loadDogOfTheDay };
+        }
       },
       mounted(){
         fetch('/api/dogs', { // fetch dog api
