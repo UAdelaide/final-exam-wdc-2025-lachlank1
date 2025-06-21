@@ -65,7 +65,7 @@
           }
         }
 
-        async function applyToWalk(requestId) {
+        async function applyToWalk(requestId) { // Remove hardcoded user
           try {
             const user = await getCurrentUser();
             const res = await fetch(`/api/walks/${requestId}/apply`, {
@@ -86,7 +86,7 @@
           }
         }
 
-        async function getCurrentUser(){
+        async function getCurrentUser(){ // GEt current users;
           const res = await fetch ('/api/users/me',{
             method: 'GET',
             credentials: 'include',
