@@ -45,7 +45,8 @@
           <td>{{ dog.name}}</td>
           <td>{{ dog.size }}</td>
           <td>{{ dog.owner_id }}</td>
-          <td>loadDogOfTheDay</td>
+          <td>
+            <img v-if="dogOfTheDay" :src="dogOfTheDay" alt = "Dog of The Day">
         </tr>
       </table>
   </div>
