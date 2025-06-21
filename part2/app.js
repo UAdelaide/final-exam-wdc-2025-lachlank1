@@ -3,7 +3,6 @@ const path = require('path');
 const db = require('./models/db');
 const session = require('express-session'); // import session middeware
 require('dotenv').config();
-const part1MessagesRoute = require ('../part1/routes/messages.js');
 
 const app = express();
 
@@ -22,10 +21,12 @@ app.use(session({ // set up session middleware
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
+const part1MessagesRoute = require ('../part1/routes/messages.js'); // Added to be able to use route from part1
 
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api)
 
 // login route
 app.post('/login', async (req, res) => {
