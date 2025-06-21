@@ -61,7 +61,6 @@ router.post('/:id/apply', async (req, res) => {
     res.status(500).json({ error: 'Failed to apply for walk' });
   }
 
-
 });
 
 module.exports = router;
