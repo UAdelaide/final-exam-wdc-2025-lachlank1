@@ -75,7 +75,7 @@
           credentials: 'include' // include for cookies
         })
           .then(res => res.json())
-          .then(data => this.dogs = data) // send dog results
+          .then(async data => this.dogs = data) // send dog results
         this.loadDogOfTheDay();
         }
     }).mount('#app');
