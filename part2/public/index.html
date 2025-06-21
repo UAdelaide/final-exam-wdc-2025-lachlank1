@@ -19,6 +19,16 @@
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a> -->
     <!--Commented out as per penny's video-->
 
+  <!--Login form-->
+  <form action = "/login" method = "POST" class = "login"> <!--get.post method-->
+    <h6>Username</h6>
+    <input type = "text" name = "username" required class = "inputBox"><br> <!--username input-->
+    <h6>Password</h6>
+    <input type = "password" name= "password" required class = "inputBox"><br> <!--password input-->
+    <br>
+    <button type = "submit">Login</button> <!--submit form button-->
+  </form>
+
     <div class = "registerDogs">
         <h2>All Registered Dogs</h2>
         <table v-if="dogs.length > 0">
@@ -41,16 +51,6 @@
         </table>
     </div>
   </div>
-
-  <!--Login form-->
-  <form action = "/login" method = "POST" class = "login"> <!--get.post method-->
-    <h6>Username</h6>
-    <input type = "text" name = "username" required class = "inputBox"><br> <!--username input-->
-    <h6>Password</h6>
-    <input type = "password" name= "password" required class = "inputBox"><br> <!--password input-->
-    <br>
-    <button type = "submit">Login</button> <!--submit form button-->
-  </form>
 
   <script>
     const { createApp } = Vue;
