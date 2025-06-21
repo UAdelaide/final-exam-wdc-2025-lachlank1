@@ -45,13 +45,11 @@
           message: 'Welcome to the Dog Walking Service!',
           dogs: []
         };
-      }
+      },
       mounted(){
         fetch('/api/dogs', {
           credentials: 'include' // include for cookies
-
         })
-      }
       }
     }).mount('#app');
   </script>
