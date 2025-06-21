@@ -62,7 +62,9 @@ app.get('/dogs', async (req, res) => {
     res.json(rows);
 });
 
-async
+async function getCurrentUser(){
+    const re
+}
 
 // Export the app instead of listening here
 module.exports = app;
