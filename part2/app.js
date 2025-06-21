@@ -63,7 +63,9 @@ app.get('/dogs', async (req, res) => {
 });
 
 async function getCurrentUser(){
-    const re
+    const response = await fetch('/api/users/me',P
+        method: 'GET'
+    )
 }
 
 // Export the app instead of listening here
