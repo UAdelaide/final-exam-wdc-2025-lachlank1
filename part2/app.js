@@ -74,8 +74,8 @@ app.get('/api/users/me', (req, res) => { // Route for getting current user
     });
 });
 
-app.get('/api/dogs', async (req, res) => { // included d.dog_id
-    const [dogs] = await db.query(`
+app.get('/api/dogs', async (req, res) => { // Changed to accomodate for penny's video
+    const [dogs] = await db.query(` 
         SELECT d.name AS dog_name,
         d.size AS size,
         d.dog_id as dog_id,
@@ -84,5 +84,7 @@ app.get('/api/dogs', async (req, res) => { // included d.dog_id
     `);
     res.json(dogs);
 });
+
+
 // Export the app instead of listening here
 module.exports = app;
