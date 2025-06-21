@@ -80,7 +80,7 @@ app.get('/api/dogs', async (req, res) => { // included d.dog_id
         d.size AS size,
         d.dog_id as dog_id,
         d.owner_id AS owner_id
-        FROM dogs
+        FROM Dogs d
     `);
     res.json(dogs);
 });
