@@ -67,7 +67,7 @@
         async loadDogOfTheDay(){
             const response = await fetch('https://dog.ceo/api/breeds/image/random');
             const data = await response.json();
-            dogOfTheDay.value = data.message;
+         = data.message;
         }
       },
       mounted(){
