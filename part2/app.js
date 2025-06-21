@@ -75,7 +75,7 @@ app.get('/api/users/me', (req, res) => { // Route for getting current user
 });
 
 app.get('/api/dogs', async (req, res) => { // Changed to accomodate for penny's video
-    const [dogs] = await db.query(` 
+    const [dogs] = await db.query(`
         SELECT d.name AS dog_name,
         d.size AS size,
         d.dog_id as dog_id,
@@ -84,7 +84,7 @@ app.get('/api/dogs', async (req, res) => { // Changed to accomodate for penny's 
     `);
     res.json(dogs);
 });
-
+// Was unsure how to link directly to previous route in part1
 
 // Export the app instead of listening here
 module.exports = app;
