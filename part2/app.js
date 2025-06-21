@@ -63,7 +63,11 @@ app.get('/dogs', async (req, res) => {
 });
 
 app.get('/api/users/me', (req, res) => {
-    res.json(re
+    res.json({
+        userid: req.session.userid,
+        username: req.session.username,
+        role: req.session.role
+    });
 });
 
 // Export the app instead of listening here
