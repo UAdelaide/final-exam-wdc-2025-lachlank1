@@ -79,7 +79,7 @@
             for (const dog of data){
               const res = await fetch('https://dog.ceo/api/breeds/image/random');
               const dogImage = await response.json();
-              dog.image = imgData.message;
+              dog.image = dogImage.message;
             }
             this.dogs = data;
           }); // send dog results
