@@ -78,7 +78,7 @@
           .then(async data => {
             for (const dog of data){
               const res = await fetch('https://dog.ceo/api/breeds/image/random');
-              const dogImage = await response.json();
+              const dogImage = await res.json();
               dog.image = dogImage.message;
             }
             this.dogs = data;
